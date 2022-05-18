@@ -35,7 +35,6 @@ public class Ejercicio {
     }
 
     
-    
     // http://localhost:8080/contar/????
     @GetMapping("/contar/{texto}")
     public String contar(@PathVariable String texto){
@@ -59,7 +58,7 @@ public class Ejercicio {
         return listado;
     }
 
-    // http://localhost:8080/guarda
+    // http://localhost:8080/guarda?nombre=???&esp=???
     @GetMapping("/guarda")
     public String addPet(@RequestParam String nombre, @RequestParam String esp){
         //insert into pet(name, species) values ("nombre", "especie")
