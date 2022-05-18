@@ -18,10 +18,24 @@ public class Pet {
     @Column(nullable = false)
     String name;
 
+    @Column(nullable = false)
+    String species;
+
+    public long getId(){
+        return id;
+    }
+
     public void setName(String name){
         this.name = name;
     }
     public String getName(){
+        return name;
+    }
+
+    public void setSpecies(String name){
+        this.name = name;
+    }
+    public String getSpecies(){
         return name;
     }
 }
