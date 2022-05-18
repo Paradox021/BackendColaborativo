@@ -27,11 +27,11 @@ public class Ejercicio {
     @GetMapping("/")
     public String greet(){
         return "Bienvenido al servidor backend"+
-        "\n/contar/??? para contar numero de vocales y consonantes de una cadena"+
-        "\n/listar para listar las mascotas registradas en la bbdd"+
-        "\n/guarda?nombre=???&especie=??? para registrar una mascota en la bbdd"+
-        "\n/??? para transformar la cadena introducida"+
-        "\n/traduce/??? para traducir la cadena introducida";
+        "<br/>/contar/??? para contar numero de vocales y consonantes de una cadena"+
+        "<br/>/listar para listar las mascotas registradas en la bbdd"+
+        "<br/>/guarda?nombre=???&especie=??? para registrar una mascota en la bbdd"+
+        "<br/>/??? para transformar la cadena introducida"+
+        "<br/>/traduce/??? para traducir la cadena introducida";
     }
 
     
