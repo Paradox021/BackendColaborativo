@@ -18,9 +18,9 @@ public class Pet {
     @Column(nullable = false)
     String name;
 
-    public long getId(){
+    public Long getId(){
         return id;
-    }
+    } 
 
     public void setName(String name){
         this.name = name;
@@ -28,5 +28,4 @@ public class Pet {
     public String getName(){
         return name;
     }
-
 }
