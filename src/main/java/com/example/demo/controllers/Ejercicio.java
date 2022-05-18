@@ -26,11 +26,11 @@ public class Ejercicio {
     // http://localhost:8080/
     @GetMapping("/")
     public String greet(){
-        return "Bienvenido al servidor backend"+
-        "<br/>/contar/??? para contar numero de vocales y consonantes de una cadena"+
-        "<br/>/listar para listar las mascotas registradas en la bbdd"+
-        "<br/>/guarda?nombre=???&especie=??? para registrar una mascota en la bbdd"+
-        "<br/>/??? para transformar la cadena introducida"+
+        return "Bienvenido al servidor backend<br/>"+
+        "<br/>/contar/??? para contar numero de vocales y consonantes de una cadena<br/>"+
+        "<br/>/listar para listar las mascotas registradas en la bbdd<br/>"+
+        "<br/>/guarda?nombre=???&especie=??? para registrar una mascota en la bbdd<br/>"+
+        "<br/>/??? para transformar la cadena introducida<br/>"+
         "<br/>/traduce/??? para traducir la cadena introducida";
     }
 
