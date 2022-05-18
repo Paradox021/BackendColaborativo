@@ -29,7 +29,7 @@ public class Ejercicio {
         return "Bienvenido al servidor backend<br/>"+
         "<br/>/contar/XXXX  para contar numero de vocales y consonantes de una cadena<br/>"+
         "<br/>/listar para  listar las mascotas registradas en la bbdd<br/>"+
-        "<br/>/guarda?nombre=XXXX&esp=XXXX  para registrar una mascota en la bbdd<br/>"+
+        "<br/>/guarda?nombre=XXXX  para registrar una mascota en la bbdd<br/>"+
         "<br/>/XXXX  para transformar la cadena introducida<br/>"+
         "<br/>/traduce/XXXX  para traducir la cadena introducida";
     }
@@ -51,20 +51,18 @@ public class Ejercicio {
         String listado = "Mascotas registradas:<br/>";
         for(Pet pet : pets){
             listado +=pet.getId() + "\t";
-            listado += pet.getName() + "\t";
-            listado += pet.getSpecies();
+            listado += pet.getName();
             listado += "<br/>";
         }
         return listado;
     }
 
-    // http://localhost:8080/guarda?nombre=???&esp=???
+    // http://localhost:8080/guarda?nombre=???
     @GetMapping("/guarda")
-    public String addPet(@RequestParam String nombre, @RequestParam String esp){
-        //insert into pet(name, species) values ("nombre", "especie")
+    public String addPet(@RequestParam String nombre){
+        //insert into pet(name) values ("nombre")
         Pet pet = new Pet();
         pet.setName(nombre);
-        pet.setSpecies(esp);
         petService.savePet(pet);
         return "Mascota registrada correctamente";
     }
