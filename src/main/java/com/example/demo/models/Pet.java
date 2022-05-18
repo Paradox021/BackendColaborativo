@@ -18,6 +18,9 @@ public class Pet {
     @Column(nullable = false)
     String name;
 
+    @Column(nullable = false)
+    String species;
+
     public Long getId(){
         return id;
     } 
@@ -28,4 +31,12 @@ public class Pet {
     public String getName(){
         return name;
     }
+
+    public void setSpecies(String species){
+        this.species = species;
+    }
+    public String getSpecies(){
+        return species;
+    }
+
 }

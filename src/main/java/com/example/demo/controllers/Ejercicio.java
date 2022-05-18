@@ -51,7 +51,8 @@ public class Ejercicio {
         String listado = "Mascotas registradas:<br/>";
         for(Pet pet : pets){
             listado +=pet.getId() + "\t";
-            listado += pet.getName();
+            listado += pet.getName() + "\t";
+            listado += pet.getSpecies();
             listado += "<br/>";
         }
         return listado;
@@ -59,10 +60,11 @@ public class Ejercicio {
 
     // http://localhost:8080/guarda?nombre=???
     @GetMapping("/guarda")
-    public String addPet(@RequestParam String nombre){
+    public String addPet(@RequestParam String nombre, @RequestParam String especie){
         //insert into pet(name) values ("nombre")
         Pet pet = new Pet();
         pet.setName(nombre);
+        pet.setSpecies(especie);
         petService.savePet(pet);
         return "Mascota registrada correctamente";
     }
