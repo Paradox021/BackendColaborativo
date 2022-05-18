@@ -29,7 +29,7 @@ public class Ejercicio {
         return "Bienvenido al servidor backend<br/>"+
         "<br/>/contar/XXXX  para contar numero de vocales y consonantes de una cadena<br/>"+
         "<br/>/listar para  listar las mascotas registradas en la bbdd<br/>"+
-        "<br/>/guarda?nombre=XXXX  para registrar una mascota en la bbdd<br/>"+
+        "<br/>/guarda?nombre=XXXX&especie=XXXX  para registrar una mascota en la bbdd<br/>"+
         "<br/>/XXXX  para transformar la cadena introducida<br/>"+
         "<br/>/traduce/XXXX  para traducir la cadena introducida";
     }
