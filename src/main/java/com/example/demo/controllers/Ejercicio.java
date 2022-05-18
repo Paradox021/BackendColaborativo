@@ -62,7 +62,7 @@ public class Ejercicio {
     // http://localhost:8080/guarda
     @GetMapping("/guarda")
     public String addPet(@RequestParam String nombre, @RequestParam String especie){
-        //insert into joke(text) values ("texto")
+        //insert into pet(name, species) values ("nombre", "especie")
         Pet pet = new Pet();
         pet.setName(nombre);
         pet.setSpecies(especie);
