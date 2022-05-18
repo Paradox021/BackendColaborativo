@@ -27,11 +27,11 @@ public class Ejercicio {
     @GetMapping("/")
     public String greet(){
         return "Bienvenido al servidor backend<br/>"+
-        "<br/>/contar/??? para contar numero de vocales y consonantes de una cadena<br/>"+
-        "<br/>/listar para listar las mascotas registradas en la bbdd<br/>"+
-        "<br/>/guarda?nombre=???&especie=??? para registrar una mascota en la bbdd<br/>"+
-        "<br/>/??? para transformar la cadena introducida<br/>"+
-        "<br/>/traduce/??? para traducir la cadena introducida";
+        "<br/>/contar/XXXX  para contar numero de vocales y consonantes de una cadena<br/>"+
+        "<br/>/listar para  listar las mascotas registradas en la bbdd<br/>"+
+        "<br/>/guarda?nombre=XXXX&esp=XXXX  para registrar una mascota en la bbdd<br/>"+
+        "<br/>/XXXX  para transformar la cadena introducida<br/>"+
+        "<br/>/traduce/XXXX  para traducir la cadena introducida";
     }
 
     
@@ -61,11 +61,11 @@ public class Ejercicio {
 
     // http://localhost:8080/guarda
     @GetMapping("/guarda")
-    public String addPet(@RequestParam String nombre, @RequestParam String especie){
+    public String addPet(@RequestParam String nombre, @RequestParam String esp){
         //insert into pet(name, species) values ("nombre", "especie")
         Pet pet = new Pet();
         pet.setName(nombre);
-        pet.setSpecies(especie);
+        pet.setSpecies(esp);
         petService.savePet(pet);
         return "Mascota registrada correctamente";
     }
