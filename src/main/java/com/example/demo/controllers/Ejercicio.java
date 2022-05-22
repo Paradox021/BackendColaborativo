@@ -83,4 +83,12 @@ public class Ejercicio {
         return t.responseData.translatedText;
     }
 
+    @GetMapping("/delete")
+    public String deletePet(@RequestParam Long Id){
+        //insert into pet(name) values ("nombre")
+        
+        petService.deletePet(Id);
+        return "Mascota borrada correctamente";
+    }
+
 }

@@ -22,4 +22,8 @@ public class PetService {
         ArrayList<Pet> pets = (ArrayList<Pet>) petRepository.findAll();
         return pets;
     }
+
+    public void deletePet(Long Id){
+        petRepository.deleteById(Id);
+    }
 }
