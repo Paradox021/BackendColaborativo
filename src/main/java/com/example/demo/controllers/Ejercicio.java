@@ -50,8 +50,8 @@ public class Ejercicio {
         ArrayList<Pet> pets = petService.getAllPets();
         String listado = "Mascotas registradas:<br/>";
         for(Pet pet : pets){
-            listado +=pet.getId() + "  ";
-            listado += pet.getName() + "  ";
+            listado +=pet.getId() + " ";
+            listado += pet.getName() + " ";
             listado += pet.getSpecies();
             listado += "<br/>";
         }
