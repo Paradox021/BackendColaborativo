@@ -19,7 +19,8 @@ public class Utils {
     public static String transformaTexto(String texto){
         char[] cadena = texto.toCharArray();
         for(int i=0; i<cadena.length; i++){
-            if(Math.random()<0.5) cadena[i] = Character.toUpperCase(cadena[i]);           
+            if(Math.random()<0.5) cadena[i] = Character.toUpperCase(cadena[i]);      
+            else cadena[i] = Character.toLowerCase(cadena[i]);       
         }
         
         return new String(cadena);
